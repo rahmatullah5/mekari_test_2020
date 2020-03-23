@@ -32,11 +32,19 @@ class Reciter
 		if recite_line > 12 || recite_line <= 0
 			@error_message = 'Recite line value should between 0 and 12'
 			@error_status = true
+			return
 		end
 
 		unless randomize.eql?('y') || randomize.eql?('n')
 			@error_message = 'Randomize value should be "n" or "y"'
 			@error_status = true
+			return
+		end
+
+		unless subject_only.eql?('y') || subject_only.eql?('n')
+			@error_message = 'Subject condition value should be "n" or "y"'
+			@error_status = true
+			return
 		end
 	end
 	
