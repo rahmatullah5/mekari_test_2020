@@ -1,0 +1,12 @@
+1, the horse and the hound and the horn
+2, the farmer
+3, the rooster
+4, the priest
+5, the man
+6, the maiden
+7, the cow
+8, the dog
+9, the cat
+10, the rat
+11, the malt
+12, jack
