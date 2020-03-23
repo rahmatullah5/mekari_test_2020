@@ -51,4 +51,11 @@ class AlphaTest < Test::Unit::TestCase
 		assert_equal 'Randomize value should be "n" or "y"', Reciter.new('1', '-1').call
 		assert_equal 'Randomize value should be "n" or "y"', Reciter.new('1', '!@#$%^&*()').call
 	end
+
+	def test_with_invalid_subject_parameter
+		assert_equal 'Subject condition value should be "n" or "y"', Reciter.new('1', 'n', 'a').call
+		assert_equal 'Subject condition value should be "n" or "y"', Reciter.new('1', 'n', '10').call
+		assert_equal 'Subject condition value should be "n" or "y"', Reciter.new('1', 'n', '-1').call
+		assert_equal 'Subject condition value should be "n" or "y"', Reciter.new('1', 'n', '!@#$%^&*()').call
+	end	
 end
