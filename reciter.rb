@@ -60,8 +60,7 @@ class Reciter
 	end
 
 	def get_subjects_based_on_lyrics
-		subjects = get_subjects
-		filtered_subjects = lyrics.map{|line| subjects.select{|subject| subject[:id].eql?(line[:id])}.map{|subject| subject[:subject]}}.join(', ')
+		lyrics.map{|line| get_subjects.select{|subject| subject[:id].eql?(line[:id])}.map{|subject| subject[:subject]}}.join(', ')
 	end
 
 	def get_subjects
